@@ -1,0 +1,193 @@
+@font-face {
+    font-family: Bigilla;
+    src: url("./fonts/Bigilla.otf");
+}
+
+
+html {
+    font-size: 16px;
+    color: white;
+}
+
+* {
+    font-family: Bigilla, 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
+}
+
+/* NAVBAR */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.menu {
+    margin-left: 2rem;
+}
+
+.logo {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.cart {
+    margin-right: 2rem;
+}
+
+/* FIRST SECTION*/
+
+.home-page {
+    background-color: #8e9775;
+}
+
+.home-page-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url("images/121010821_119427596403412_6147256274002946085_n.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 40rem;
+}
+
+.home-page-text h1 {
+    font-size: 6rem;
+    margin-left: 45%;
+    color: white;
+}
+
+/* ABOUT US SECTION*/
+
+#about-us {
+    background-color: #e3e3e3;
+    min-height: 30vh;
+    color: #4a503d;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us h3 {
+    font-size: 2rem;
+}
+
+#about-us p {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* LINKS TO ITEMS SECTION */
+
+.collections {
+    min-height: 70vh;
+    background-color: #e3e3e3;
+    color: #e3e3e3;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.collections li {
+    list-style-type: none;
+}
+
+.collections a {
+    font-family: 'Playfair Display', serif;
+    color: #e3e3e3;
+    text-decoration: none;
+}
+
+.collections-container {
+    background-color: #8e9775;
+    border-radius: 50% 50% 0 0;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*CONTACTS SECTION*/
+
+.contacts {
+    min-height: 20vh;
+    background-color: #8e9775;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.contacts a {
+    color: #e3e3e3;
+}
+
+.contacts a:hover {
+    color: #4a503d;
+}
+
+/* HOVER ON LINKS ANIMATION*/
+
+.link {
+    position: relative;
+    z-index: 1;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #4a503d;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 400ms ease;
+}
+
+.link:hover::before,
+.link:focus::before {
+    transform: scaleX(1);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width:1200px) {
+    .home-page-text h1 {
+        margin-left: -10%;
+        margin-bottom: 30%;
+        align-self: flex-end;
+    }
+
+}
