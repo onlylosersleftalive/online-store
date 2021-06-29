@@ -7,5 +7,5 @@ Web site for online store (not finished).
 Demo is available [here](https://onlylosersleftalive.github.io/online-store/).
 
 ## Technologies
-* HTMl
+* HTML
 * CSS
